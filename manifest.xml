@@ -1,18 +1,90 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>a1b2c3d4-e5f6-7890-abcd-ef1234567890</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>RM Digital</ProviderName>
+  <ProviderName>RM Digital (rmdigital.co.id)</ProviderName>
   <DefaultLocale>id-ID</DefaultLocale>
   <DisplayName DefaultValue="RM Mail Merge Tools" />
-  <Description DefaultValue="Mail Merge Tools untuk Word - split, convert, compress, combine PDF" />
+  <Description DefaultValue="Mail Merge Tools untuk Word - split, convert, compress, combine PDF. Dikembangkan oleh RM Digital." />
+  <IconUrl DefaultValue="https://merge.rmdigital.co.id/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://merge.rmdigital.co.id/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://rmdigital.co.id" />
+
   <Hosts>
     <Host Name="Document" />
   </Hosts>
+
   <DefaultSettings>
     <SourceLocation DefaultValue="https://merge.rmdigital.co.id/index.html" />
   </DefaultSettings>
+
   <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title" />
+            <Description resid="GetStarted.Description" />
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl" />
+          </GetStarted>
+
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="RMMailMergeGroup">
+                <Label resid="GroupLabel" />
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16" />
+                  <bt:Image size="32" resid="Icon.32x32" />
+                  <bt:Image size="80" resid="Icon.80x80" />
+                </Icon>
+                <Control xsi:type="Button" id="RMMailMergeButton">
+                  <Label resid="ButtonLabel" />
+                  <Supertip>
+                    <Title resid="ButtonLabel" />
+                    <Description resid="ButtonTooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16" />
+                    <bt:Image size="32" resid="Icon.32x32" />
+                    <bt:Image size="80" resid="Icon.80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>RMMailMergeTaskpane</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://merge.rmdigital.co.id/assets/icon-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://merge.rmdigital.co.id/assets/icon-32.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://merge.rmdigital.co.id/assets/icon-80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://rmdigital.co.id" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://merge.rmdigital.co.id/index.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GetStarted.Title" DefaultValue="RM Mail Merge Tools" />
+        <bt:String id="GroupLabel" DefaultValue="RM Mail Merge" />
+        <bt:String id="ButtonLabel" DefaultValue="Mail Merge" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="Mail Merge Tools untuk Word - split, convert, compress, combine PDF. Dikembangkan oleh RM Digital (rmdigital.co.id)." />
+        <bt:String id="ButtonTooltip" DefaultValue="Buka panel RM Mail Merge Tools" />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
 </OfficeApp>
