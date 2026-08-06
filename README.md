@@ -1,63 +1,75 @@
 # RM Mail Merge Tools
 
-Add-in Mail Merge untuk Microsoft Word. Split, convert, compress, dan combine PDF langsung dari Task Pane Word.
+> Office Web Add-in for Microsoft Word — split, convert, compress, and combine PDF files directly from the Word task pane.
 
-Dikembangkan oleh **RM Digital** — [rmdigital.co.id](https://rmdigital.co.id)
+<div align="center">
 
----
+<img src="https://img.shields.io/badge/Platform-Microsoft_Word-2B579A?style=flat-square&logo=microsoftword&logoColor=white" alt="Platform" />
+<img src="https://img.shields.io/badge/Type-Office_Add--in-2B579A?style=flat-square&logo=microsoftoffice&logoColor=white" alt="Type" />
+<img src="https://img.shields.io/badge/License-Proprietary-D4A017?style=flat-square&logo=gnu&logoColor=white" alt="License" />
+<a href="https://github.com/rifqimulyawan/rm-mail-merge-tools/releases"><img src="https://img.shields.io/github/v/release/rifqimulyawan/rm-mail-merge-tools?style=flat-square&color=2B579A&label=Latest%20Release" alt="Release" /></a>
 
-## Fitur
-
-**Mail Merge** — Merge data dari Excel/CSV ke template Word dengan satu klik
-
-**Batch Convert** — Convert multiple DOCX to PDF sekaligus
-
-**PDF Combine** — Gabungkan multiple PDF menjadi satu file
-
-**PDF Compress** — Kompres ukuran PDF untuk pengiriman email
-
-**Filename prefix/suffix** — Custom naming untuk output files
-
-**Remove blank fields** — Hapus field kosong otomatis saat merge
-
-**Guide popup** — Panduan penggunaan built-in di dalam add-in
-
-**Settings panel** — Konfigurasi output directory, naming, dan behavior
+</div>
 
 ---
 
-## Install
+## Features
 
-### Cara mudah — Installer (.exe / .pkg)
+| Feature | Description |
+|---------|-------------|
+| **Mail Merge** | Merge data from Excel/CSV into Word templates with one click |
+| **Batch Convert** | Convert multiple DOCX files to PDF simultaneously |
+| **PDF Combine** | Merge multiple PDF files into one |
+| **PDF Compress** | Compress PDF file size for email delivery |
+| **Filename prefix/suffix** | Custom naming for output files |
+| **Remove blank fields** | Automatically remove empty fields during merge |
+| **Guide popup** | Built-in usage guide inside the add-in |
+| **Settings panel** | Configure output directory, naming, and behavior |
 
-Download installer dari [halaman Releases](https://github.com/rifqimulyawan/rm-mail-merge-tools/releases), lalu:
+---
 
-1. Jalankan installer
+## Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| Platform | Microsoft Office Web Add-in |
+| Integration | Office.js (Office Web Add-in API) |
+| Hosting | Remote server (no local dependencies required) |
+
+---
+
+## Installation
+
+### Easy Way — Installer (.exe / .pkg)
+
+Download the installer from the [Releases page](https://github.com/rifqimulyawan/rm-mail-merge-tools/releases), then:
+
+1. Run the installer
 2. Restart Microsoft Word
-3. Buka **Insert > My Add-ins**
-4. Cari **RM Mail Merge Tools** di tab Developer Add-ins, atau klik **Upload My Add-in** dan pilih `manifest.xml`
+3. Go to **Insert > My Add-ins**
+4. Find **RM Mail Merge Tools** in the Developer Add-ins tab, or click **Upload My Add-in** and select `manifest.xml`
 
-Tidak perlu Node.js, tidak perlu technical knowledge. Web app di-host di server, installer hanya mendaftarkan manifest ke Word.
+No Node.js or technical knowledge required. The web app is hosted on a server — the installer only registers the manifest to Word.
 
 ---
 
 ## Build macOS Installer
 
-macOS `.pkg` installer di-build otomatis via GitHub Actions setiap push tag `v*`:
+macOS `.pkg` installer is built automatically via GitHub Actions on tag push `v*`:
 
 ```bash
 git tag v1.0.0
 git push origin v1.0.0
 ```
 
-Atau trigger manual dari tab **Actions** di GitHub. Download `.pkg` dari halaman Actions > Artifacts.
+Or trigger manually from the **Actions** tab on GitHub. Download `.pkg` from Actions > Artifacts.
 
 ---
 
-## Lisensi
+## License
 
 © RM Digital — All rights reserved
 
-## Pengembang
+## Developer
 
 **RM Digital** — [rmdigital.co.id](https://rmdigital.co.id)
